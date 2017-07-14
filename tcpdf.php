@@ -7033,7 +7033,7 @@ class TCPDF {
 					return $this->ImagePngAlpha($file, $x, $y, $pixw, $pixh, $w, $h, 'PNG', $link, $align, $resize, $dpi, $palign, $filehash);
 				}
 			}
-			if (($info === false) AND function_exists($gdfunction)) {
+			if (($info === false) AND function_exists($gdfunction) AND file_exists($file)) {
 				try {
 					// GD library
 					$img = $gdfunction($file);
